@@ -25,12 +25,14 @@ vector<int> getApartmentsInFloorVariants(
 
     int apartmentsInFloorVariant = (int) ceil((float) apartmentNumber / (float) totalFloorsBeforeApartment);
 
+    int i = 0;
     vector<int> apartmentsInFloorVariants;
     while (apartmentsInFloorVariant * (totalFloorsBeforeApartment - 1) < apartmentNumber &&
-           apartmentsInFloorVariant < 15000) {
+           i <= 1000) {
 
         apartmentsInFloorVariants.push_back(apartmentsInFloorVariant);
         apartmentsInFloorVariant++;
+        i++;
     }
 
     return apartmentsInFloorVariants;
